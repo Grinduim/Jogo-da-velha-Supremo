@@ -1,0 +1,11 @@
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\bin\Debug\Aplicacação.exe.config
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\bin\Debug\Aplicacação.exe
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\bin\Debug\Aplicacação.pdb
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.csproj.AssemblyReference.cache
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.Form1.resources
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.Properties.Resources.resources
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.csproj.GenerateResource.cache
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.exe
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.pdb
