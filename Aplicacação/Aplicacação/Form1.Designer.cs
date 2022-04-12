@@ -46,7 +46,7 @@
             // 
             // Game
             // 
-            this.Game.Location = new System.Drawing.Point(122, 21);
+            this.Game.Location = new System.Drawing.Point(134, 21);
             this.Game.Name = "Game";
             this.Game.Size = new System.Drawing.Size(542, 465);
             this.Game.TabIndex = 1;
