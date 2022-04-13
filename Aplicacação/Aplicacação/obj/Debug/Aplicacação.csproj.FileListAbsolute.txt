@@ -34,3 +34,5 @@ C:\Users\vinic\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Deb
 C:\Users\vinic\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.exe
 C:\Users\vinic\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.pdb
 C:\Users\vinic\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.Cadastro.resources
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.Cadastro.resources
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.Login.resources

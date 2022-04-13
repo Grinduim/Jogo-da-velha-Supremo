@@ -63,6 +63,16 @@ namespace Aplicacação.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Circle {
+            get {
+                object obj = ResourceManager.GetObject("Circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
@@ -76,6 +86,16 @@ namespace Aplicacação.Properties {
         internal static System.Drawing.Bitmap icons8_cross_mark_button_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-cross-mark-button-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap XGame {
+            get {
+                object obj = ResourceManager.GetObject("XGame", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
