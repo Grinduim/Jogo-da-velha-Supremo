@@ -63,9 +63,9 @@ namespace Aplicacação.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Circle {
+        internal static System.Drawing.Bitmap Circle1 {
             get {
-                object obj = ResourceManager.GetObject("Circle", resourceCulture);
+                object obj = ResourceManager.GetObject("Circle1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
