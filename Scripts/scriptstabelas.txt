@@ -1,0 +1,44 @@
+CREATE TABLE Usuario (
+    Id int IDENTITY(1,1) PRIMARY KEY,
+    senha varchar(255) NOT NULL,
+    email varchar(255) not null,
+	nick varchar(255) not null, 
+	Score float not null,
+);
+
+
+go
+
+Create TABLE JOGO(
+	ID int identity(1,1) PRIMARY KEY,
+	IdJogadorX int FOREIGN KEY REFERENCES Usuario(ID),
+	IdJogadorY int FOREIGN KEY REFERENCES Usuario(ID),
+	StatusGame int Not null, 
+	TipodeJogo int not null,            
+);
+
+go
+
+create table JogoDaVelha(
+	id int identity(1,1) primary key,
+	IDJogo int foreign key references Jogo(ID),
+	casa1 int not Null,
+	casa2 int not Null,
+	casa3 int not Null,
+	casa4 int not Null,
+	casa5 int not Null,
+	casa6 int not Null,
+	casa7 int not Null,
+	casa8 int not Null,
+	casa9 int not Null
+);
+
+go
+
+create table Fila(
+	ID int Identity(1,1) Primary key,
+	IDJogador int FOREIGN KEY REFERENCES USUARIO(id),
+	HoraEntrada timestamp,
+);
+
+

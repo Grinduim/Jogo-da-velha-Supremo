@@ -32,5 +32,10 @@ namespace Aplicacação
             var login = new Login();
             login.Show();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
