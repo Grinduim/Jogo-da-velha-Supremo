@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace Aplicacação
 {
@@ -23,14 +25,27 @@ namespace Aplicacação
 
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private async void btnEntrar_Click(object sender, EventArgs e)
         {
-            string user  = txbLogin.Text.ToString();
-            if(user == "000")
+            using(var client = new HttpClient())
             {
-                this.Hide();
-                Form1 form = new Form1();
-                form.Show();
+                var path = $"https://localhost:44301/api/login/{txbLogin.Text}/{TxbSenha.Text}/";
+                var response = await client.GetAsync(path);
+                var content = await response.Content.ReadAsStringAsync();
+                Usuario obj = JsonConvert.DeserializeObject<Usuario>(content);
+                if(obj.Nick != null)
+                {
+                    this.Hide();
+                    PVL form = new PVL();
+                    form.Show();
+                    txbLogin.Text = "";
+                    TxbSenha.Text = "";
+                    return;
+                }
+                MessageBox.Show("Senha ou email invalido");
+                TxbSenha.Text = "";
+                return;
+                
             }
         }
 

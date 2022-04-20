@@ -36,3 +36,6 @@ C:\Users\vinic\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Deb
 C:\Users\vinic\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.Cadastro.resources
 C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.Cadastro.resources
 C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.Login.resources
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Aluno\Desktop\Jogo-da-velha-Supremo\Aplicacação\Aplicacação\obj\Debug\Aplicacação.csproj.CopyComplete

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JogoDaVelhaModelStoreContainer" CdmEntityContainer="JogoDaVelhaEntities">
+    <EntitySetMapping Name="Fila">
+      <EntityTypeMapping TypeName="JogoDaVelhaModel.Fila">
+        <MappingFragment StoreEntitySet="Fila">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDJogador" ColumnName="IDJogador" />
+          <ScalarProperty Name="HoraEntrada" ColumnName="HoraEntrada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JOGO">
+      <EntityTypeMapping TypeName="JogoDaVelhaModel.JOGO">
+        <MappingFragment StoreEntitySet="JOGO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdJogadorX" ColumnName="IdJogadorX" />
+          <ScalarProperty Name="IdJogadorY" ColumnName="IdJogadorY" />
+          <ScalarProperty Name="StatusGame" ColumnName="StatusGame" />
+          <ScalarProperty Name="TipodeJogo" ColumnName="TipodeJogo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JogoDaVelha">
+      <EntityTypeMapping TypeName="JogoDaVelhaModel.JogoDaVelha">
+        <MappingFragment StoreEntitySet="JogoDaVelha">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="IDJogo" ColumnName="IDJogo" />
+          <ScalarProperty Name="casa1" ColumnName="casa1" />
+          <ScalarProperty Name="casa2" ColumnName="casa2" />
+          <ScalarProperty Name="casa3" ColumnName="casa3" />
+          <ScalarProperty Name="casa4" ColumnName="casa4" />
+          <ScalarProperty Name="casa5" ColumnName="casa5" />
+          <ScalarProperty Name="casa6" ColumnName="casa6" />
+          <ScalarProperty Name="casa7" ColumnName="casa7" />
+          <ScalarProperty Name="casa8" ColumnName="casa8" />
+          <ScalarProperty Name="casa9" ColumnName="casa9" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="JogoDaVelhaModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="nick" ColumnName="nick" />
+          <ScalarProperty Name="score" ColumnName="score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
