@@ -16,16 +16,16 @@ namespace API
     {
         public int id { get; set; }
         public Nullable<int> IDJogo { get; set; }
-        public int casa1 { get; set; }
-        public int casa2 { get; set; }
-        public int casa3 { get; set; }
-        public int casa4 { get; set; }
-        public int casa5 { get; set; }
-        public int casa6 { get; set; }
-        public int casa7 { get; set; }
-        public int casa8 { get; set; }
-        public int casa9 { get; set; }
+        public int Casa1 { get; set; }
+        public int Casa2 { get; set; }
+        public int Casa3 { get; set; }
+        public int Casa4 { get; set; }
+        public int Casa5 { get; set; }
+        public int Casa6 { get; set; }
+        public int Casa7 { get; set; }
+        public int Casa8 { get; set; }
+        public int Casa9 { get; set; }
     
-        public virtual JOGO JOGO { get; set; }
+        public virtual Jogo Jogo { get; set; }
     }
 }

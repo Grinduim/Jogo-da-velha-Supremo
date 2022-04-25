@@ -18,21 +18,21 @@ namespace API
         public Usuario()
         {
             this.Fila = new HashSet<Fila>();
-            this.JOGO = new HashSet<JOGO>();
-            this.JOGO1 = new HashSet<JOGO>();
+            this.Jogo = new HashSet<Jogo>();
+            this.Jogo1 = new HashSet<Jogo>();
         }
     
         public int Id { get; set; }
-        public string senha { get; set; }
-        public string email { get; set; }
-        public string nick { get; set; }
-        public double score { get; set; }
+        public string Senha { get; set; }
+        public string Email { get; set; }
+        public string Nick { get; set; }
+        public double Score { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Fila> Fila { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<JOGO> JOGO { get; set; }
+        public virtual ICollection<Jogo> Jogo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<JOGO> JOGO1 { get; set; }
+        public virtual ICollection<Jogo> Jogo1 { get; set; }
     }
 }

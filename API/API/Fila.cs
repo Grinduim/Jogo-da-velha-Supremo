@@ -14,8 +14,8 @@ namespace API
     
     public partial class Fila
     {
-        public int ID { get; set; }
-        public Nullable<int> IDJogador { get; set; }
+        public int Id { get; set; }
+        public Nullable<int> IdJogador { get; set; }
         public byte[] HoraEntrada { get; set; }
     
         public virtual Usuario Usuario { get; set; }

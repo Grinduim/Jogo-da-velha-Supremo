@@ -31,8 +31,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txbEmail = new System.Windows.Forms.TextBox();
-            this.TxbNome = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.TxbSenha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Label();
@@ -68,37 +66,16 @@
             // 
             this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbEmail.Location = new System.Drawing.Point(95, 132);
-            this.txbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(105, 26);
             this.txbEmail.TabIndex = 1;
-            // 
-            // TxbNome
-            // 
-            this.TxbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxbNome.Location = new System.Drawing.Point(95, 175);
-            this.TxbNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TxbNome.Name = "TxbNome";
-            this.TxbNome.Size = new System.Drawing.Size(105, 26);
-            this.TxbNome.TabIndex = 13;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 179);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Nome:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // TxbSenha
             // 
             this.TxbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxbSenha.Location = new System.Drawing.Point(95, 215);
-            this.TxbSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxbSenha.Margin = new System.Windows.Forms.Padding(2);
             this.TxbSenha.Name = "TxbSenha";
             this.TxbSenha.Size = new System.Drawing.Size(105, 26);
             this.TxbSenha.TabIndex = 15;
@@ -146,7 +123,7 @@
             // txNick
             // 
             this.txNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txNick.Location = new System.Drawing.Point(96, 256);
+            this.txNick.Location = new System.Drawing.Point(96, 179);
             this.txNick.Margin = new System.Windows.Forms.Padding(2);
             this.txNick.Name = "txNick";
             this.txNick.Size = new System.Drawing.Size(105, 26);
@@ -156,7 +133,7 @@
             // 
             this.Nick.AutoSize = true;
             this.Nick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nick.Location = new System.Drawing.Point(23, 262);
+            this.Nick.Location = new System.Drawing.Point(23, 185);
             this.Nick.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Nick.Name = "Nick";
             this.Nick.Size = new System.Drawing.Size(43, 20);
@@ -176,13 +153,11 @@
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.TxbSenha);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TxbNome);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cadastro";
             this.Text = "Cadastro";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -196,8 +171,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbEmail;
-        private System.Windows.Forms.TextBox TxbNome;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxbSenha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label btnCadastrar;

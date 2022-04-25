@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="93e2eaa230274d338e59f75880e299a3" Name="Diagram1">
+      <Diagram DiagramId="b3624998a08d4fba858c60a134dafe79" Name="Diagram1">
         <EntityTypeShape EntityType="JogoDaVelhaModel.Fila" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="JogoDaVelhaModel.JOGO" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="JogoDaVelhaModel.Jogo" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="JogoDaVelhaModel.JogoDaVelha" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="JogoDaVelhaModel.Usuario" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
-        <AssociationConnector Association="JogoDaVelhaModel.FK__Fila__IDJogador__1920BF5C" ManuallyRouted="false" />
-        <AssociationConnector Association="JogoDaVelhaModel.FK__JOGO__IdJogadorX__1273C1CD" ManuallyRouted="false" />
-        <AssociationConnector Association="JogoDaVelhaModel.FK__JOGO__IdJogadorY__1367E606" ManuallyRouted="false" />
+        <AssociationConnector Association="JogoDaVelhaModel.FK__Fila__IdJogador__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="JogoDaVelhaModel.FK__Jogo__IdJogadorX__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="JogoDaVelhaModel.FK__Jogo__IdJogadorY__1367E606" ManuallyRouted="false" />
         <AssociationConnector Association="JogoDaVelhaModel.FK__JogoDaVel__IDJog__164452B1" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

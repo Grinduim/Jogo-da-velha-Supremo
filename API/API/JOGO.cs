@@ -12,10 +12,10 @@ namespace API
     using System;
     using System.Collections.Generic;
     
-    public partial class JOGO
+    public partial class Jogo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public JOGO()
+        public Jogo()
         {
             this.JogoDaVelha = new HashSet<JogoDaVelha>();
         }

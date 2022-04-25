@@ -13,20 +13,36 @@ namespace API
         public object Get(string email, string senha)
         {
             JogoDaVelhaEntities entities = new JogoDaVelhaEntities();
-            Usuario logado = entities.Usuario.FirstOrDefault(u => u.email == email && u.senha == senha);
+            Usuario logado = entities.Usuario.FirstOrDefault(u => u.Email == email && u.Senha == senha);
             if (logado == null)
             {
-                return new
+                return new  
                 {
                     message = "email ou senha incorretos."
                 };
             }
             return new
             {
-                nick = logado.nick,
-                email = logado.email,
+                nick = logado.Nick,
+                email = logado.Email,
                 id = logado.Id
             };
+        }
+
+        public int Post(string email, string senha, string nick)
+        {
+            JogoDaVelhaEntities entities = new JogoDaVelhaEntities();
+            Usuario valido = entities.Usuario.FirstOrDefault(u => u.Email == email);
+
+            if(valido == null)
+            {
+                return 300;
+                // terminar a parte de tratamento de erros no jogo
+            }
+            else
+            {
+                return 404;
+            }
         }
 
         // GET api/<controller>/5

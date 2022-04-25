@@ -26,7 +26,7 @@ namespace API
         }
     
         public virtual DbSet<Fila> Fila { get; set; }
-        public virtual DbSet<JOGO> JOGO { get; set; }
+        public virtual DbSet<Jogo> Jogo { get; set; }
         public virtual DbSet<JogoDaVelha> JogoDaVelha { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     }

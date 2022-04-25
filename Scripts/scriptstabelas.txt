@@ -1,3 +1,9 @@
+CREATE DATABASE JogoDaVelha;
+
+use JogoDaVelha;
+go
+
+
 CREATE TABLE Usuario (
     Id int IDENTITY(1,1) PRIMARY KEY,
     Senha varchar(255) NOT NULL,

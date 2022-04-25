@@ -7,13 +7,13 @@
       <Schema Namespace="JogoDaVelhaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Fila">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IDJogador" Type="int" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdJogador" Type="int" />
           <Property Name="HoraEntrada" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
-        <EntityType Name="JOGO">
+        <EntityType Name="Jogo">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -29,27 +29,27 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IDJogo" Type="int" />
-          <Property Name="casa1" Type="int" Nullable="false" />
-          <Property Name="casa2" Type="int" Nullable="false" />
-          <Property Name="casa3" Type="int" Nullable="false" />
-          <Property Name="casa4" Type="int" Nullable="false" />
-          <Property Name="casa5" Type="int" Nullable="false" />
-          <Property Name="casa6" Type="int" Nullable="false" />
-          <Property Name="casa7" Type="int" Nullable="false" />
-          <Property Name="casa8" Type="int" Nullable="false" />
-          <Property Name="casa9" Type="int" Nullable="false" />
+          <Property Name="Casa1" Type="int" Nullable="false" />
+          <Property Name="Casa2" Type="int" Nullable="false" />
+          <Property Name="Casa3" Type="int" Nullable="false" />
+          <Property Name="Casa4" Type="int" Nullable="false" />
+          <Property Name="Casa5" Type="int" Nullable="false" />
+          <Property Name="Casa6" Type="int" Nullable="false" />
+          <Property Name="Casa7" Type="int" Nullable="false" />
+          <Property Name="Casa8" Type="int" Nullable="false" />
+          <Property Name="Casa9" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="senha" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="nick" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="score" Type="float" Nullable="false" />
+          <Property Name="Senha" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Nick" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Score" Type="float" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Fila__IDJogador__1920BF5C">
+        <Association Name="FK__Fila__IdJogador__1920BF5C">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Fila" Type="Self.Fila" Multiplicity="*" />
           <ReferentialConstraint>
@@ -57,39 +57,39 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Fila">
-              <PropertyRef Name="IDJogador" />
+              <PropertyRef Name="IdJogador" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__JOGO__IdJogadorX__1273C1CD">
+        <Association Name="FK__Jogo__IdJogadorX__1273C1CD">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
-          <End Role="JOGO" Type="Self.JOGO" Multiplicity="*" />
+          <End Role="Jogo" Type="Self.Jogo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuario">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="JOGO">
+            <Dependent Role="Jogo">
               <PropertyRef Name="IdJogadorX" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__JOGO__IdJogadorY__1367E606">
+        <Association Name="FK__Jogo__IdJogadorY__1367E606">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
-          <End Role="JOGO" Type="Self.JOGO" Multiplicity="*" />
+          <End Role="Jogo" Type="Self.Jogo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuario">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="JOGO">
+            <Dependent Role="Jogo">
               <PropertyRef Name="IdJogadorY" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__JogoDaVel__IDJog__164452B1">
-          <End Role="JOGO" Type="Self.JOGO" Multiplicity="0..1" />
+          <End Role="Jogo" Type="Self.Jogo" Multiplicity="0..1" />
           <End Role="JogoDaVelha" Type="Self.JogoDaVelha" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="JOGO">
+            <Principal Role="Jogo">
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="JogoDaVelha">
@@ -99,23 +99,23 @@
         </Association>
         <EntityContainer Name="JogoDaVelhaModelStoreContainer">
           <EntitySet Name="Fila" EntityType="Self.Fila" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="JOGO" EntityType="Self.JOGO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jogo" EntityType="Self.Jogo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="JogoDaVelha" EntityType="Self.JogoDaVelha" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Fila__IDJogador__1920BF5C" Association="Self.FK__Fila__IDJogador__1920BF5C">
+          <AssociationSet Name="FK__Fila__IdJogador__1920BF5C" Association="Self.FK__Fila__IdJogador__1920BF5C">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Fila" EntitySet="Fila" />
           </AssociationSet>
-          <AssociationSet Name="FK__JOGO__IdJogadorX__1273C1CD" Association="Self.FK__JOGO__IdJogadorX__1273C1CD">
+          <AssociationSet Name="FK__Jogo__IdJogadorX__1273C1CD" Association="Self.FK__Jogo__IdJogadorX__1273C1CD">
             <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="JOGO" EntitySet="JOGO" />
+            <End Role="Jogo" EntitySet="Jogo" />
           </AssociationSet>
-          <AssociationSet Name="FK__JOGO__IdJogadorY__1367E606" Association="Self.FK__JOGO__IdJogadorY__1367E606">
+          <AssociationSet Name="FK__Jogo__IdJogadorY__1367E606" Association="Self.FK__Jogo__IdJogadorY__1367E606">
             <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="JOGO" EntitySet="JOGO" />
+            <End Role="Jogo" EntitySet="Jogo" />
           </AssociationSet>
           <AssociationSet Name="FK__JogoDaVel__IDJog__164452B1" Association="Self.FK__JogoDaVel__IDJog__164452B1">
-            <End Role="JOGO" EntitySet="JOGO" />
+            <End Role="Jogo" EntitySet="Jogo" />
             <End Role="JogoDaVelha" EntitySet="JogoDaVelha" />
           </AssociationSet>
         </EntityContainer>
@@ -126,14 +126,14 @@
       <Schema Namespace="JogoDaVelhaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Fila">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IDJogador" Type="Int32" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdJogador" Type="Int32" />
           <Property Name="HoraEntrada" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Fila__IDJogador__1920BF5C" FromRole="Fila" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Fila__IdJogador__1920BF5C" FromRole="Fila" ToRole="Usuario" />
         </EntityType>
-        <EntityType Name="JOGO">
+        <EntityType Name="Jogo">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -142,9 +142,9 @@
           <Property Name="IdJogadorY" Type="Int32" />
           <Property Name="StatusGame" Type="Int32" Nullable="false" />
           <Property Name="TipodeJogo" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__JOGO__IdJogadorX__1273C1CD" FromRole="JOGO" ToRole="Usuario" />
-          <NavigationProperty Name="Usuario1" Relationship="Self.FK__JOGO__IdJogadorY__1367E606" FromRole="JOGO" ToRole="Usuario" />
-          <NavigationProperty Name="JogoDaVelha" Relationship="Self.FK__JogoDaVel__IDJog__164452B1" FromRole="JOGO" ToRole="JogoDaVelha" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Jogo__IdJogadorX__1273C1CD" FromRole="Jogo" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario1" Relationship="Self.FK__Jogo__IdJogadorY__1367E606" FromRole="Jogo" ToRole="Usuario" />
+          <NavigationProperty Name="JogoDaVelha" Relationship="Self.FK__JogoDaVel__IDJog__164452B1" FromRole="Jogo" ToRole="JogoDaVelha" />
         </EntityType>
         <EntityType Name="JogoDaVelha">
           <Key>
@@ -152,31 +152,31 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IDJogo" Type="Int32" />
-          <Property Name="casa1" Type="Int32" Nullable="false" />
-          <Property Name="casa2" Type="Int32" Nullable="false" />
-          <Property Name="casa3" Type="Int32" Nullable="false" />
-          <Property Name="casa4" Type="Int32" Nullable="false" />
-          <Property Name="casa5" Type="Int32" Nullable="false" />
-          <Property Name="casa6" Type="Int32" Nullable="false" />
-          <Property Name="casa7" Type="Int32" Nullable="false" />
-          <Property Name="casa8" Type="Int32" Nullable="false" />
-          <Property Name="casa9" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="JOGO" Relationship="Self.FK__JogoDaVel__IDJog__164452B1" FromRole="JogoDaVelha" ToRole="JOGO" />
+          <Property Name="Casa1" Type="Int32" Nullable="false" />
+          <Property Name="Casa2" Type="Int32" Nullable="false" />
+          <Property Name="Casa3" Type="Int32" Nullable="false" />
+          <Property Name="Casa4" Type="Int32" Nullable="false" />
+          <Property Name="Casa5" Type="Int32" Nullable="false" />
+          <Property Name="Casa6" Type="Int32" Nullable="false" />
+          <Property Name="Casa7" Type="Int32" Nullable="false" />
+          <Property Name="Casa8" Type="Int32" Nullable="false" />
+          <Property Name="Casa9" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Jogo" Relationship="Self.FK__JogoDaVel__IDJog__164452B1" FromRole="JogoDaVelha" ToRole="Jogo" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="senha" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="nick" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="score" Type="Double" Nullable="false" />
-          <NavigationProperty Name="Fila" Relationship="Self.FK__Fila__IDJogador__1920BF5C" FromRole="Usuario" ToRole="Fila" />
-          <NavigationProperty Name="JOGO" Relationship="Self.FK__JOGO__IdJogadorX__1273C1CD" FromRole="Usuario" ToRole="JOGO" />
-          <NavigationProperty Name="JOGO1" Relationship="Self.FK__JOGO__IdJogadorY__1367E606" FromRole="Usuario" ToRole="JOGO" />
+          <Property Name="Senha" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nick" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Score" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Fila" Relationship="Self.FK__Fila__IdJogador__1920BF5C" FromRole="Usuario" ToRole="Fila" />
+          <NavigationProperty Name="Jogo" Relationship="Self.FK__Jogo__IdJogadorX__1273C1CD" FromRole="Usuario" ToRole="Jogo" />
+          <NavigationProperty Name="Jogo1" Relationship="Self.FK__Jogo__IdJogadorY__1367E606" FromRole="Usuario" ToRole="Jogo" />
         </EntityType>
-        <Association Name="FK__Fila__IDJogador__1920BF5C">
+        <Association Name="FK__Fila__IdJogador__1920BF5C">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Fila" Type="Self.Fila" Multiplicity="*" />
           <ReferentialConstraint>
@@ -184,39 +184,39 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Fila">
-              <PropertyRef Name="IDJogador" />
+              <PropertyRef Name="IdJogador" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__JOGO__IdJogadorX__1273C1CD">
+        <Association Name="FK__Jogo__IdJogadorX__1273C1CD">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
-          <End Role="JOGO" Type="Self.JOGO" Multiplicity="*" />
+          <End Role="Jogo" Type="Self.Jogo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuario">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="JOGO">
+            <Dependent Role="Jogo">
               <PropertyRef Name="IdJogadorX" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__JOGO__IdJogadorY__1367E606">
+        <Association Name="FK__Jogo__IdJogadorY__1367E606">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
-          <End Role="JOGO" Type="Self.JOGO" Multiplicity="*" />
+          <End Role="Jogo" Type="Self.Jogo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuario">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="JOGO">
+            <Dependent Role="Jogo">
               <PropertyRef Name="IdJogadorY" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__JogoDaVel__IDJog__164452B1">
-          <End Role="JOGO" Type="Self.JOGO" Multiplicity="0..1" />
+          <End Role="Jogo" Type="Self.Jogo" Multiplicity="0..1" />
           <End Role="JogoDaVelha" Type="Self.JogoDaVelha" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="JOGO">
+            <Principal Role="Jogo">
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="JogoDaVelha">
@@ -226,23 +226,23 @@
         </Association>
         <EntityContainer Name="JogoDaVelhaEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Fila" EntityType="Self.Fila" />
-          <EntitySet Name="JOGO" EntityType="Self.JOGO" />
+          <EntitySet Name="Jogo" EntityType="Self.Jogo" />
           <EntitySet Name="JogoDaVelha" EntityType="Self.JogoDaVelha" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
-          <AssociationSet Name="FK__Fila__IDJogador__1920BF5C" Association="Self.FK__Fila__IDJogador__1920BF5C">
+          <AssociationSet Name="FK__Fila__IdJogador__1920BF5C" Association="Self.FK__Fila__IdJogador__1920BF5C">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Fila" EntitySet="Fila" />
           </AssociationSet>
-          <AssociationSet Name="FK__JOGO__IdJogadorX__1273C1CD" Association="Self.FK__JOGO__IdJogadorX__1273C1CD">
+          <AssociationSet Name="FK__Jogo__IdJogadorX__1273C1CD" Association="Self.FK__Jogo__IdJogadorX__1273C1CD">
             <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="JOGO" EntitySet="JOGO" />
+            <End Role="Jogo" EntitySet="Jogo" />
           </AssociationSet>
-          <AssociationSet Name="FK__JOGO__IdJogadorY__1367E606" Association="Self.FK__JOGO__IdJogadorY__1367E606">
+          <AssociationSet Name="FK__Jogo__IdJogadorY__1367E606" Association="Self.FK__Jogo__IdJogadorY__1367E606">
             <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="JOGO" EntitySet="JOGO" />
+            <End Role="Jogo" EntitySet="Jogo" />
           </AssociationSet>
           <AssociationSet Name="FK__JogoDaVel__IDJog__164452B1" Association="Self.FK__JogoDaVel__IDJog__164452B1">
-            <End Role="JOGO" EntitySet="JOGO" />
+            <End Role="Jogo" EntitySet="Jogo" />
             <End Role="JogoDaVelha" EntitySet="JogoDaVelha" />
           </AssociationSet>
         </EntityContainer>
@@ -255,15 +255,15 @@
           <EntitySetMapping Name="Fila">
             <EntityTypeMapping TypeName="JogoDaVelhaModel.Fila">
               <MappingFragment StoreEntitySet="Fila">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="IDJogador" ColumnName="IDJogador" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdJogador" ColumnName="IdJogador" />
                 <ScalarProperty Name="HoraEntrada" ColumnName="HoraEntrada" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="JOGO">
-            <EntityTypeMapping TypeName="JogoDaVelhaModel.JOGO">
-              <MappingFragment StoreEntitySet="JOGO">
+          <EntitySetMapping Name="Jogo">
+            <EntityTypeMapping TypeName="JogoDaVelhaModel.Jogo">
+              <MappingFragment StoreEntitySet="Jogo">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="IdJogadorX" ColumnName="IdJogadorX" />
                 <ScalarProperty Name="IdJogadorY" ColumnName="IdJogadorY" />
@@ -277,15 +277,15 @@
               <MappingFragment StoreEntitySet="JogoDaVelha">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="IDJogo" ColumnName="IDJogo" />
-                <ScalarProperty Name="casa1" ColumnName="casa1" />
-                <ScalarProperty Name="casa2" ColumnName="casa2" />
-                <ScalarProperty Name="casa3" ColumnName="casa3" />
-                <ScalarProperty Name="casa4" ColumnName="casa4" />
-                <ScalarProperty Name="casa5" ColumnName="casa5" />
-                <ScalarProperty Name="casa6" ColumnName="casa6" />
-                <ScalarProperty Name="casa7" ColumnName="casa7" />
-                <ScalarProperty Name="casa8" ColumnName="casa8" />
-                <ScalarProperty Name="casa9" ColumnName="casa9" />
+                <ScalarProperty Name="Casa1" ColumnName="Casa1" />
+                <ScalarProperty Name="Casa2" ColumnName="Casa2" />
+                <ScalarProperty Name="Casa3" ColumnName="Casa3" />
+                <ScalarProperty Name="Casa4" ColumnName="Casa4" />
+                <ScalarProperty Name="Casa5" ColumnName="Casa5" />
+                <ScalarProperty Name="Casa6" ColumnName="Casa6" />
+                <ScalarProperty Name="Casa7" ColumnName="Casa7" />
+                <ScalarProperty Name="Casa8" ColumnName="Casa8" />
+                <ScalarProperty Name="Casa9" ColumnName="Casa9" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -293,10 +293,10 @@
             <EntityTypeMapping TypeName="JogoDaVelhaModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="senha" ColumnName="senha" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="nick" ColumnName="nick" />
-                <ScalarProperty Name="score" ColumnName="score" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nick" ColumnName="Nick" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
